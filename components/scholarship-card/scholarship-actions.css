@@ -1,0 +1,50 @@
+/* Scholarship Actions Styles */
+.scholarship-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-bg);
+}
+
+.scholarship-actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.scholarship-actions .compare-btn {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.scholarship-actions .compare-btn:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.btn-with-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.btn-arrow {
+  width: 6px;
+  height: 10px;
+  transition: transform var(--transition-fast);
+}
+
+.btn-with-arrow:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .scholarship-actions {
+    flex-direction: column;
+  }
+  
+  .scholarship-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

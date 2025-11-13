@@ -1,9 +1,5 @@
-// Main initialization file
-import { catalog } from './catalog.js';
-import { compare } from './compare.js';
-import { faq } from './faq.js';
+// Main initialization file for Contact page
 import { lead } from './lead.js';
-import { testimonials } from './testimonials.js';
 import { componentLoader } from './component-loader.js';
 import { header } from './header.js';
 
@@ -26,16 +22,16 @@ const eventBus = {
 // Fetch data and initialize modules
 async function init() {
   try {
-    // Load all components first
-    await componentLoader.loadAllComponents();
+    // Load only necessary components
+    await componentLoader.loadComponent('header');
+    await componentLoader.loadComponent('contact');
+    await componentLoader.loadComponent('footer');
 
-    // Insert components into page
-    // Header should be at the top, after skip-link
+    // Insert header
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
       headerPlaceholder.outerHTML = componentLoader.components['header'];
     } else {
-      // Fallback: insert after skip-link
       const skipLink = document.querySelector('.skip-link');
       if (skipLink) {
         skipLink.insertAdjacentHTML('afterend', componentLoader.components['header']);
@@ -44,29 +40,13 @@ async function init() {
       }
     }
     
-    // Insert main content components in BUV-inspired order
-    componentLoader.insertComponent('hero', '#main-content');      // Banner
-    componentLoader.insertComponent('quote', '#main-content');      // Quote Section
-    componentLoader.insertComponent('catalog', '#main-content');    // Catalog
-    componentLoader.insertComponent('compare', '#main-content');    // Compare
-    componentLoader.insertComponent('faq', '#main-content');        // FAQ Link
-    componentLoader.insertComponent('testimonials', '#main-content'); // Testimonials
+    // Insert contact component
+    componentLoader.insertComponent('contact', '#main-content');
     
     // Footer at the end
     componentLoader.insertComponent('footer', 'body');
 
-    // Fetch data
-    const [scholarshipsData, faqData, testimonialsData] = await Promise.all([
-      fetch('data/scholarships.json').then(r => r.json()),
-      fetch('data/faq.json').then(r => r.json()),
-      fetch('data/testimonials.json').then(r => r.json())
-    ]);
-
-    // Initialize modules
-    catalog.init(scholarshipsData, eventBus);
-    compare.init(scholarshipsData, eventBus);
-    // faq.init(faqData); // No longer needed - now just a link
-    testimonials.init(testimonialsData);
+    // Initialize lead module
     lead.init();
 
     // Initialize header (mobile menu, search modal, etc.)
@@ -83,9 +63,9 @@ async function init() {
     // Setup back to top
     setupBackToTop();
 
-    console.log('Application initialized successfully');
+    console.log('Contact page initialized successfully');
   } catch (error) {
-    console.error('Error initializing application:', error);
+    console.error('Error initializing contact page:', error);
   }
 }
 

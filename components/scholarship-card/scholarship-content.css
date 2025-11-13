@@ -1,0 +1,74 @@
+/* Scholarship Content Styles */
+.scholarship-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60%;
+}
+
+.scholarship-name {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+.scholarship-quota {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-sm);
+}
+
+.scholarship-benefit {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-md);
+}
+
+.scholarship-eligibility {
+  margin-bottom: 0;
+}
+
+.scholarship-eligibility h4 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-sm);
+  color: white;
+}
+
+.scholarship-eligibility ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scholarship-eligibility li {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.scholarship-eligibility li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .scholarship-content {
+    max-width: 100%;
+  }
+  
+  .scholarship-name {
+    font-size: var(--font-size-xl);
+  }
+}
+

@@ -9,11 +9,13 @@ export const componentLoader = {
       }
       const html = await htmlResponse.text();
 
-      // Load CSS
+      // Load main CSS
       const cssResponse = await fetch(`components/${componentName}/${componentName}.css`);
       if (cssResponse.ok) {
         const css = await cssResponse.text();
-        this.injectCSS(`${componentName}-styles`, css);
+        // Process @import statements
+        const processedCss = await this.processCSSImports(css, componentName);
+        this.injectCSS(`${componentName}-styles`, processedCss);
       }
 
       return html;
@@ -21,6 +23,49 @@ export const componentLoader = {
       console.error(`Error loading component ${componentName}:`, error);
       return '';
     }
+  },
+
+  async processCSSImports(css, componentName) {
+    // Match @import url('...') statements
+    const importRegex = /@import\s+url\(['"]?([^'"]+)['"]?\);/g;
+    const imports = [];
+    let match;
+    
+    while ((match = importRegex.exec(css)) !== null) {
+      imports.push(match[1]);
+    }
+
+    // Load all imported CSS files
+    const importedCSS = await Promise.all(
+      imports.map(async (importPath) => {
+        // Resolve relative paths
+        let resolvedPath = importPath;
+        if (importPath.startsWith('./')) {
+          resolvedPath = `components/${componentName}/${importPath.substring(2)}`;
+        } else if (importPath.startsWith('../')) {
+          resolvedPath = importPath.substring(3);
+        }
+        
+        try {
+          const response = await fetch(resolvedPath);
+          if (response.ok) {
+            return await response.text();
+          }
+        } catch (error) {
+          console.warn(`Failed to load CSS import: ${resolvedPath}`, error);
+        }
+        return '';
+      })
+    );
+
+    // Replace @import statements with actual CSS content
+    let processedCss = css;
+    imports.forEach((importPath, index) => {
+      const importStatement = `@import url('${importPath}');`;
+      processedCss = processedCss.replace(importStatement, importedCSS[index] || '');
+    });
+
+    return processedCss;
   },
 
   injectCSS(id, css) {
@@ -38,12 +83,12 @@ export const componentLoader = {
     const components = [
       'header',
       'hero',
-      'finder',
+      'quote',
       'catalog',
       'compare',
-      'financial-aid',
       'faq',
       'contact',
+      'testimonials',
       'footer'
     ];
 

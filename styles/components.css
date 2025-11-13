@@ -5,7 +5,11 @@
   z-index: 40;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  background: linear-gradient(90deg, rgba(245, 246, 251, 0.94), rgba(245, 246, 251, 0.98));
+  background: linear-gradient(
+    90deg,
+    rgba(245, 246, 251, 0.94),
+    rgba(245, 246, 251, 0.98)
+  );
   border-bottom: 1px solid rgba(215, 219, 234, 0.9);
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.02);
 }
@@ -65,7 +69,8 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast);
   white-space: nowrap;
   border: 1px solid transparent;
 }
@@ -105,18 +110,18 @@
     align-items: stretch;
     gap: var(--spacing-md);
   }
-  
+
   .nav-logo {
     align-self: center;
     width: fit-content;
   }
-  
+
   .nav-list {
     justify-content: center;
     gap: var(--spacing-xs);
     width: 100%;
   }
-  
+
   .nav-list a,
   .nav-pill {
     font-size: var(--font-size-xs);
@@ -132,7 +137,7 @@
     flex-direction: column;
     gap: var(--spacing-xs);
   }
-  
+
   .nav-list a,
   .nav-pill {
     width: 100%;
@@ -160,7 +165,11 @@
 }
 
 .btn-primary {
-  background-image: linear-gradient(135deg, var(--color-primary), var(--color-primary-deep));
+  background-image: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-deep)
+  );
   background-size: 140% 140%;
   background-position: 0% 0%;
   color: #fff;
@@ -211,12 +220,17 @@
 
 /* Cards - Floating cards */
 .card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 249, 255, 0.98));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(248, 249, 255, 0.98)
+  );
   border-radius: 20px;
   border: 1px solid rgba(226, 228, 239, 0.9);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
   padding: 1.4rem 1.3rem;
-  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out;
   position: relative;
 }
 
@@ -228,7 +242,8 @@
 
 .card:focus-within {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2), 0 22px 50px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2),
+    0 22px 50px rgba(15, 23, 42, 0.12);
 }
 
 .card-header {
@@ -321,7 +336,8 @@
   outline: none;
   border-color: rgba(255, 138, 60, 0.8);
   background: white;
-  box-shadow: 0 0 0 1px rgba(255, 138, 60, 0.35), 0 8px 18px rgba(255, 138, 60, 0.18);
+  box-shadow: 0 0 0 1px rgba(255, 138, 60, 0.35),
+    0 8px 18px rgba(255, 138, 60, 0.18);
 }
 
 .form-input:hover,
@@ -335,12 +351,12 @@
 .form-select:invalid:not(:placeholder-shown),
 .field-invalid {
   border-color: rgba(239, 68, 68, 0.9);
-  background: #FEF2F2;
+  background: #fef2f2;
 }
 
 .form-error,
 .field-error {
-  color: #DC2626;
+  color: #dc2626;
   font-size: 0.78rem;
   margin-top: 0.25rem;
   display: none;
@@ -455,12 +471,12 @@
 
 .toast--success,
 .toast.success {
-  background: linear-gradient(135deg, #22C55E, #16A34A);
+  background: linear-gradient(135deg, #22c55e, #16a34a);
 }
 
 .toast--error,
 .toast.error {
-  background: linear-gradient(135deg, #EF4444, #B91C1C);
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
 }
 
 /* Back to top */
@@ -545,7 +561,7 @@
   .compare-table {
     font-size: var(--font-size-sm);
   }
-  
+
   .compare-table th,
   .compare-table td {
     padding: var(--spacing-sm);
@@ -590,20 +606,20 @@
 
 .badge-very-high,
 .finder-fit-very-high {
-  background: #DCFCE7;
-  color: #15803D;
+  background: #dcfce7;
+  color: #15803d;
 }
 
 .badge-high,
 .finder-fit-high {
-  background: #FEF3C7;
-  color: #B45309;
+  background: #fef3c7;
+  color: #b45309;
 }
 
 .badge-medium,
 .finder-fit-medium {
-  background: #E0EAFF;
-  color: #1D4ED8;
+  background: #e0eaff;
+  color: #1d4ed8;
 }
 
 .finder-fit-very-high {
@@ -689,7 +705,12 @@
   margin-top: 2.4rem;
   padding: 2.4rem 1.8rem;
   border-radius: var(--radius-lg);
-  background: radial-gradient(circle at top left, #FFE7D3 0, #FFF4E9 30%, #FFFFFF 70%);
+  background: radial-gradient(
+    circle at top left,
+    #ffe7d3 0,
+    #fff4e9 30%,
+    #ffffff 70%
+  );
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 1.8rem;
@@ -704,7 +725,7 @@
 
 /* Financial Aid - Gradient card */
 #financial-aid .card {
-  background: linear-gradient(135deg, #FFF4E9 0%, #FFE7D3 50%, #FFFFFF 100%);
+  background: linear-gradient(135deg, #fff4e9 0%, #ffe7d3 50%, #ffffff 100%);
   border-color: rgba(255, 138, 60, 0.2);
 }
 
@@ -726,7 +747,12 @@
 
 /* Loading Skeleton */
 .skeleton {
-  background: linear-gradient(90deg, var(--color-bg-dark) 25%, var(--color-bg-light) 50%, var(--color-bg-dark) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-dark) 25%,
+    var(--color-bg-light) 50%,
+    var(--color-bg-dark) 75%
+  );
   background-size: 200% 100%;
   animation: loading 1.5s ease-in-out infinite;
   border-radius: var(--radius-md);

@@ -241,7 +241,7 @@ export const finder = {
         </div>
         <div class="card-footer">
           <a href="#catalog" class="btn btn-outline btn-sm">Xem chi tiết</a>
-          <a href="#contact" class="btn btn-primary btn-sm">Đăng ký tư vấn</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Đăng ký tư vấn</a>
         </div>
       </div>
     `;
@@ -268,7 +268,7 @@ export const finder = {
         </div>
         <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
           <a href="#financial-aid" class="btn btn-primary btn-lg">Xem Học trước – Trả sau</a>
-          <a href="#contact" class="btn btn-outline btn-lg">Đăng ký tư vấn</a>
+          <a href="contact.html" class="btn btn-outline btn-lg">Đăng ký tư vấn</a>
         </div>
       </div>
     `;

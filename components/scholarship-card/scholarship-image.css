@@ -1,0 +1,46 @@
+/* Scholarship Image & Overlay Styles */
+.scholarship-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.scholarship-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.scholarship-item:hover .scholarship-image {
+  transform: scale(1.05);
+}
+
+.scholarship-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xl);
+  z-index: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .scholarship-image-wrapper {
+    min-height: 300px;
+  }
+  
+  .scholarship-overlay {
+    padding: var(--spacing-lg);
+  }
+}
+

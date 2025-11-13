@@ -1,0 +1,59 @@
+<!-- Scholarship Card Component -->
+<div class="scholarship-item" data-slug="{{slug}}">
+  <div class="scholarship-image-wrapper">
+    <img
+      src="{{imageUrl}}"
+      alt="{{name}}"
+      loading="lazy"
+      class="scholarship-image"
+    />
+    <div class="scholarship-overlay">
+      <div class="scholarship-content">
+        <h3 class="scholarship-name">{{name}}</h3>
+        {{#if quota_label}}
+        <p class="scholarship-quota">{{quota_label}}</p>
+        {{/if}}
+        <p class="scholarship-benefit">{{highlight_benefit}}</p>
+        <div class="scholarship-eligibility">
+          <h4>Điều kiện:</h4>
+          <ul>
+            {{#each eligibility}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="scholarship-actions">
+          <a
+            href="{{external_link}}"
+            class="btn btn-outline btn-sm btn-with-arrow"
+          >
+            <span>Xem chi tiết</span>
+            <svg
+              class="btn-arrow"
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L5 5L1 9"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <button
+            class="btn btn-primary btn-sm compare-btn"
+            data-slug="{{slug}}"
+            data-name="{{name}}"
+          >
+            <span>+</span> So sánh
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

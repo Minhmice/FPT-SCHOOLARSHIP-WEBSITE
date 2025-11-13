@@ -132,7 +132,7 @@ export const compare = {
                   <td>
                     <div class="compare-actions">
                       <a href="${sch.external_link}" class="btn btn-outline btn-sm">Chi tiết</a>
-                      <a href="#contact" class="btn btn-primary btn-sm">Đăng ký</a>
+                      <a href="contact.html" class="btn btn-primary btn-sm">Đăng ký</a>
                       <button class="btn btn-secondary btn-sm compare-remove" data-slug="${sch.slug}">Xóa</button>
                     </div>
                   </td>

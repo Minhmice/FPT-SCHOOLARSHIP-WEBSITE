@@ -1,0 +1,13 @@
+/* Scholarship List Styles */
+.scholarship-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .scholarship-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
