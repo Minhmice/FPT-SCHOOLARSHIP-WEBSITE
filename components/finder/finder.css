@@ -1,0 +1,43 @@
+/* Finder Section */
+.finder-form {
+  padding: var(--spacing-lg);
+}
+
+.finder-form .grid {
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.finder-results {
+  margin-top: var(--spacing-xl);
+}
+
+.finder-result-card {
+  margin-bottom: var(--spacing-md);
+}
+
+.finder-fit-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.finder-fit-high {
+  background: var(--color-success);
+  color: white;
+}
+
+.finder-fit-medium {
+  background: var(--color-warning);
+  color: var(--color-text);
+}
+
+.finder-reason {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+

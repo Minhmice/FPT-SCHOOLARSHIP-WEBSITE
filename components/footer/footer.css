@@ -1,0 +1,30 @@
+/* Footer */
+.footer {
+  background: var(--color-text);
+  color: white;
+  padding: var(--spacing-xl) 0;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color var(--transition-base);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer h3 {
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: var(--spacing-sm);
+}
+

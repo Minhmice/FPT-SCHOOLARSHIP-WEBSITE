@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "global-expert",
+    "name": "Global Expert",
+    "quota_label": "100 suất",
+    "highlight_benefit": "Full học phí toàn khóa + 30 triệu/năm",
+    "eligibility": [
+      "Có giải HSGQG (Nhất/Nhì/Ba)",
+      "Ngành Công nghệ thông tin",
+      "Phỏng vấn với hội đồng",
+      "Cơ hội làm việc tại 5 quốc gia sau tốt nghiệp"
+    ],
+    "external_link": "#"
+  },
+  {
+    "slug": "high-school",
+    "name": "High School Scholarship",
+    "quota_label": "~900 suất",
+    "highlight_benefit": "Full học phí toàn khóa",
+    "eligibility": [
+      "Top 10 SchoolRank",
+      "Đề cử từ Ban Giám hiệu trường THPT",
+      "Ưu tiên khu vực 1",
+      "Xét theo hồ sơ và phỏng vấn"
+    ],
+    "external_link": "#"
+  },
+  {
+    "slug": "full",
+    "name": "Full Scholarship",
+    "quota_label": "~300 suất",
+    "highlight_benefit": "Full học phí toàn khóa",
+    "eligibility": [
+      "Giải Nhất HSGQG",
+      "ĐGNL ≥ 90%",
+      "Điểm TN THPT ≥ 9.0"
+    ],
+    "external_link": "#"
+  },
+  {
+    "slug": "two-year",
+    "name": "Two-year Scholarship",
+    "quota_label": "~500 suất",
+    "highlight_benefit": "Full học phí 2 năm đầu",
+    "eligibility": [
+      "Giải Nhì HSGQG",
+      "ĐGNL ≥ 85%",
+      "Điểm TN THPT ≥ 8.5"
+    ],
+    "external_link": "#"
+  },
+  {
+    "slug": "one-year",
+    "name": "One-year Scholarship",
+    "quota_label": "~1000 suất",
+    "highlight_benefit": "Full học phí năm đầu",
+    "eligibility": [
+      "Giải Ba HSGQG",
+      "ĐGNL ≥ 80%",
+      "Điểm TN THPT ≥ 8.0"
+    ],
+    "external_link": "#"
+  },
+  {
+    "slug": "stem-female",
+    "name": "STEM for Female",
+    "quota_label": "Không giới hạn",
+    "highlight_benefit": "20 triệu (5 triệu/kỳ × 4 kỳ đầu)",
+    "eligibility": [
+      "Nữ sinh",
+      "Ngành Công nghệ thông tin",
+      "Đăng ký xét tuyển vào FPTU"
+    ],
+    "external_link": "#"
+  }
+]
+

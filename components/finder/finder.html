@@ -1,0 +1,80 @@
+<!-- Finder Section -->
+<section id="finder" class="section" style="background: var(--color-bg-light);" aria-labelledby="finder-title">
+  <div class="container">
+    <h2 id="finder-title" class="section-title">Scholarship Finder – Tìm học bổng phù hợp</h2>
+    <div class="card" style="max-width: 900px; margin: 0 auto;">
+      <form id="finder-form" class="finder-form" aria-label="Scholarship Finder Form">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg);">
+          <div class="form-group">
+            <label for="tn-score" class="form-label">Điểm TN THPT</label>
+            <input type="number" id="tn-score" name="tn-score" class="form-input" min="0" max="10" step="0.1" placeholder="VD: 9.0">
+          </div>
+          
+          <div class="form-group">
+            <label for="dgnl-score" class="form-label">Điểm ĐGNL</label>
+            <input type="number" id="dgnl-score" name="dgnl-score" class="form-input" min="0" max="100" placeholder="VD: 85">
+          </div>
+          
+          <div class="form-group">
+            <label for="hsgqg" class="form-label">Giải HSGQG</label>
+            <select id="hsgqg" name="hsgqg" class="form-select">
+              <option value="none">Không có</option>
+              <option value="nhat">Nhất</option>
+              <option value="nhi">Nhì</option>
+              <option value="ba">Ba</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="gender" class="form-label">Giới tính</label>
+            <select id="gender" name="gender" class="form-select">
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
+              <option value="other">Khác</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="major" class="form-label">Ngành dự kiến</label>
+            <select id="major" name="major" class="form-select">
+              <option value="cntt">CNTT</option>
+              <option value="khac">Khác</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="rank10" class="form-label">Top 10 SchoolRank?</label>
+            <select id="rank10" name="rank10" class="form-select">
+              <option value="false">Không</option>
+              <option value="true">Có</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="kv1" class="form-label">Khu vực ưu tiên 1?</label>
+            <select id="kv1" name="kv1" class="form-select">
+              <option value="false">Không</option>
+              <option value="true">Có</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--color-border);">
+          <button type="submit" id="finder-submit" class="btn btn-primary btn-lg">Xem học bổng phù hợp</button>
+        </div>
+      </form>
+      
+      <div id="finder-results" class="finder-results" aria-live="polite" aria-atomic="true" style="margin-top: var(--spacing-xl);"></div>
+      
+      <!-- What-if Section -->
+      <section id="finder-whatif" aria-label="Mô phỏng điểm mục tiêu" style="display: none;">
+        <h3 class="h3">Nếu điểm tăng, học bổng có đổi không?</h3>
+        <div class="whatif-controls">
+          <!-- JS will render controls here -->
+        </div>
+        <div id="whatif-results"></div>
+      </section>
+    </div>
+  </div>
+</section>
+
